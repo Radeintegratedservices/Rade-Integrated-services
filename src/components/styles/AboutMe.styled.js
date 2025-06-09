@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 const AboutMe = styled.section`
-  height: 750px;
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     height: 1200px;
   }
-
+  
   .row {
     display: flex;
-    height: 100%;
+    height: 500px;
+    margin-bottom: 100px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       flex-direction: column;
@@ -18,7 +18,7 @@ const AboutMe = styled.section`
     }
 
     .col-1 {
-      height: 100%;
+      height: 500px;
       width: 40%;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -34,7 +34,7 @@ const AboutMe = styled.section`
     .col-2 {
       font-family: "Poppins", sans-serif;
       padding: 0 50px;
-      height: 100%;
+      height: 500px;
       width: 60%;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

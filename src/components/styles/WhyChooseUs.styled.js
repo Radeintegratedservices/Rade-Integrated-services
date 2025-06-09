@@ -20,7 +20,7 @@ const WhyChooseUs = styled.section`
     }
 
     .col-1 {
-      width: 35%;
+      width: 33.3%;
       padding: 20px 30px;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -63,7 +63,7 @@ const WhyChooseUs = styled.section`
       }
     }
     .col-2 {
-      width: 30%;
+      width: 33.3%;
       // padding: 0 20px;
       background-color: rgb(255, 255, 255);
 
@@ -80,7 +80,7 @@ const WhyChooseUs = styled.section`
     }
     .col-3 {
       font-family: "Poppins", sans-serif;
-      width: 35%;
+      width: 33.3%;
       padding: 0 30px;
       margin-bottom: 100px;
       height: 550px;

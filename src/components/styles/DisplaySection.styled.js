@@ -2,7 +2,7 @@ import styled from "styled-components";
 const DisplaySection = styled.div`
   display: flex;
   color: #fff;
-  margin-top: 200px;
+  margin-top: 100px;
   width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
