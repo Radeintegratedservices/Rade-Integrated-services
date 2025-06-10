@@ -80,7 +80,7 @@ const Services = () => {
                   <nav className="main_navigation">
                     <ul className="mastermenu">
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Services
                         </a>
                         <ul className="sub_menu">
@@ -90,7 +90,7 @@ const Services = () => {
                         </ul>
                       </li>
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Company
                         </a>
                         <ul className="sub_menu">
@@ -106,7 +106,7 @@ const Services = () => {
                         </ul>
                       </li>
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Contact
                         </a>
                         <ul className="sub_menu">

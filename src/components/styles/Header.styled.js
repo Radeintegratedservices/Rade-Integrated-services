@@ -175,6 +175,7 @@ const Header = styled.div`
               transition: opacity 300ms ease-in-out;
               clip: rect(1px, 1px, 1px, 1px);
               background-color: #fff;
+             
 
               li {
                 background-color: #fff;
@@ -197,6 +198,19 @@ const Header = styled.div`
               visibility: visible;
               opacity: 1;
               clip: inherit;
+
+               animation: fadeInBottom 300ms ease;
+
+              @keyframes fadeInBottom {
+                from {
+                  opacity: 0;
+                  transform: translateY(25px);
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
             }
           }
         }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Header } from "./styles/Header.styled";
 import { DisplaySection } from "./styles/DisplaySection.styled";
 import GoogleForm from "./GoogleForm.js";
+import ArticleShowcase from "./ArticleShowcase.js";
 import { AboutMe } from "./styles/AboutMe.styled";
 import { WhyChooseUs } from "./styles/WhyChooseUs.styled";
 import { Reviews } from "./styles/Reviews.styled";
@@ -325,17 +326,7 @@ const Home = () => {
           <DisplaySection>
             <div className="container">
               <div className="row">
-                <article className="showcase">
-                  <h1>An expert cleaning service you can trust</h1>
-                  <p>
-                    Rade integrated services Ltd is a team of specially trained
-                    and dedicated employees to provide professional service.
-                  </p>
-                  {/* <button className="btn">Learn More</button> */}
-                  <Link to="/services" className="btn">
-                    Learn More
-                  </Link>
-                </article>
+                <ArticleShowcase ></ArticleShowcase>
                 <GoogleForm></GoogleForm>
                 {/* <div className="form">
                   <h3>Get Free Estimate</h3>
