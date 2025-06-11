@@ -39,6 +39,7 @@ const WhyChooseUs = styled.section`
         font-size: 2.5rem;
         margin-bottom: 20px;
         font-weight: 700;
+        color: ${({ theme }) => theme.color.darkBlue};
 
         @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
           font-size: 2rem;
@@ -48,6 +49,7 @@ const WhyChooseUs = styled.section`
       p {
         line-height: 1.7;
         margin-bottom: 10px;
+        opacity: .7;
       }
       .btn {
         position: relative;
