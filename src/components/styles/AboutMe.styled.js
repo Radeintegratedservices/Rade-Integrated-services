@@ -9,7 +9,7 @@ const AboutMe = styled.section`
   
   .row {
     display: flex;
-    height: 500px;
+    height: 600px;
     margin-bottom: 100px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -18,8 +18,8 @@ const AboutMe = styled.section`
     }
 
     .col-1 {
-      height: 500px;
-      width: 40%;
+      height: 600px;
+      width: 45%;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         width: 100%;
@@ -28,12 +28,12 @@ const AboutMe = styled.section`
       img {
         max-width: 100%;
         width: 100%;
-        height: 500px;
+        height: 600px;
       }
     }
     .col-2 {
       font-family: "Poppins", sans-serif;
-      padding: 0 50px;
+      padding: 0 0 0 100px;
       height: 500px;
       width: 60%;
 
@@ -49,10 +49,11 @@ const AboutMe = styled.section`
       }
 
       h1 {
-        line-height: 1.3;
-        font-size: 2.5rem;
+        line-height: 1.2;
+        font-size: 3.1rem;
         margin-bottom: 20px;
         font-weight: bold;
+        color: ${({ theme }) => theme.color.darkBlue};
 
         @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
           font-size: 2rem;
@@ -60,8 +61,9 @@ const AboutMe = styled.section`
       }
 
       p {
-        line-height: 2;
+        line-height: 1.5;
         margin-bottom: 40px;
+        opacity: .7;
       }
 
       .btn {
@@ -81,16 +83,6 @@ const AboutMe = styled.section`
         box-shadow: 0 8px 24px 0 rgba(0,0,0,0.08);
         transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
 
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -2;
-          transition: background 0.4s cubic-bezier(0.4,0,0.2,1);
-        }
 
         &::after {
           content: "";
