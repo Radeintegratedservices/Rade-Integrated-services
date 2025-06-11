@@ -147,11 +147,36 @@ const Header = styled.div`
             list-style: none;
             padding: 20px 60px 20px 0;
 
-            /* Show sub_menu when hovering menu_item or sub_menu itself */
+            /* Animate border-top from left to right on hover */
+            .nav {
+              text-decoration: none;
+              color: #fff;
+              padding: 20px 0;
+              position: relative;
+              border-top: 2px solid transparent;
+              transition: border-color 0.3s linear;
+            }
+
+            .nav::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: -17px;
+              width: 0;
+              height: 2px;
+              background: #fff;
+              transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+              z-index: 1;
+            }
+
+            &:hover > .nav::before,
+            &.active > .nav::before {
+              width: 100%;
+            }
+
             &:hover > .nav,
             .nav:hover {
-              border-top: 2px solid #fff;
-              padding-top: 34px;
+              border-top: 2px solid transparent;
             }
 
             &:hover > .sub_menu,
@@ -163,12 +188,13 @@ const Header = styled.div`
               animation: fadeInBottom 300ms ease;
             }
 
-            .nav {
-              text-decoration: none;
-              color: #fff;
-              padding: 20px 0;
-              position: relative;
+            /* Add active border-top when .active class is present */
+            &.active > .nav {
+              border-top: 2px solid transparent;
+              padding-top: 34px;
+            }
 
+            .nav {
               &::after {
                 content: "";
                 position: absolute;

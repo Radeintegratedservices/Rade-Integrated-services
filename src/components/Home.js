@@ -154,7 +154,7 @@ const Home = () => {
                         <a className="nav" href="#">
                           Services
                         </a>
-                        <ul className="sub_menu">
+                        <ul className="sub_menu ">
                           <li>
                             <a href="/services">Services</a>
                           </li>
