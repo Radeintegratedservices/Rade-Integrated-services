@@ -185,10 +185,10 @@ const Home = () => {
                             <a href="/contact">Contact Us</a>
                           </li>
                           <li>
-                            <a href="/helps & Faqs">Helps & Faqs</a>
+                            <a href="#">Helps & Faqs</a>
                           </li>
                           <li>
-                            <a href="/appointment">Appointment</a>
+                            <a href="#">Appointment</a>
                           </li>
                           <li>
                             <a href="/terms">Terms & Conditions</a>

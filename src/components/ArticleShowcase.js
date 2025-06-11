@@ -18,7 +18,7 @@ const showcaseData = [
   },
 ];
 
-const ArticleShowcase = ({props}) => {
+const ArticleShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
