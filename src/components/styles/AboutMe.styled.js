@@ -61,6 +61,7 @@ const AboutMe = styled.section`
       }
 
       p {
+        color: ${({ theme }) => theme.color.darkBlue};
         line-height: 1.5;
         margin-bottom: 40px;
         opacity: .7;

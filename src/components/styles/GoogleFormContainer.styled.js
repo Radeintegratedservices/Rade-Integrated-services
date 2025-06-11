@@ -23,4 +23,9 @@ export const GoogleFormContainer = styled.div`
     border-radius: 10px;
     border: none;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      width: 100%;
+      margin-top: 100px;
+    }
 `;
