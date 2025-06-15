@@ -1,8 +1,9 @@
 import styled from "styled-components";
 const DisplaySection = styled.div`
+
   display: flex;
   color: #fff;
-  margin-top: 200px;
+  margin-top: 170px;
   width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -24,8 +25,22 @@ const DisplaySection = styled.div`
     }
 
     .showcase {
-      width: 65%;
+      width: 70%;
       padding-right: 60px;
+      opacity: 1;
+      transform: translateX(0);
+      animation: fadeInLeft 1s ease;
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         width: 100%;
@@ -38,7 +53,8 @@ const DisplaySection = styled.div`
         font-family: "Poppins", sans-serif;
         font-optical-sizing: auto;
         font-optical-sizing: auto;
-        font-weight: 800;
+        font-weight: 700;
+        font-style: normal;
         margin-bottom: 40px;
 
         @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -47,7 +63,9 @@ const DisplaySection = styled.div`
       }
 
       p {
+        width: 80%;
         margin-bottom: 40px;
+        line-height: 1.7;
       }
       .btn {
         text-decoration: none;
@@ -56,9 +74,9 @@ const DisplaySection = styled.div`
         padding: 20px 45px;
         border: none;
         border-radius: 35px;
-        color: rgb(0, 0, 0);
+        color: ${({ theme }) => theme.color.darkBlue};
         font-weight: bold;
-        background-color: rgb(252, 210, 0);
+        background-color: #fff;
         /* margin-top: 30px; */
 
         &:hover {
@@ -67,13 +85,26 @@ const DisplaySection = styled.div`
         }
       }
     }
-    .form {
+    /* .form {
       padding: 30px;
-      width: 35%;
+      width: 30%;
       height: 600px;
       background-color: #fff;
       box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.1);
       color: #000;
+      animation: fadeInRight 1s ease;
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         width: 100%;
@@ -115,7 +146,7 @@ const DisplaySection = styled.div`
           background-color: rgb(57, 170, 84);
         }
       }
-    }
+    } */
   }
 `;
 

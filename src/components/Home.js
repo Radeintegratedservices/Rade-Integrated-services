@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "./styles/Header.styled";
 import { DisplaySection } from "./styles/DisplaySection.styled";
+import GoogleForm from "./GoogleForm.js";
+import ArticleShowcase from "./ArticleShowcase.js";
 import { AboutMe } from "./styles/AboutMe.styled";
 import { WhyChooseUs } from "./styles/WhyChooseUs.styled";
 import { Reviews } from "./styles/Reviews.styled";
@@ -149,17 +151,17 @@ const Home = () => {
                   <nav className="main_navigation">
                     <ul className="mastermenu">
                       <li className="menu_item">
-                        <a className="nav" href="'#">
+                        <a className="nav" href="#">
                           Services
                         </a>
-                        <ul className="sub_menu">
+                        <ul className="sub_menu ">
                           <li>
                             <a href="/services">Services</a>
                           </li>
                         </ul>
                       </li>
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Company
                         </a>
                         <ul className="sub_menu">
@@ -175,7 +177,7 @@ const Home = () => {
                         </ul>
                       </li>
                       <li className="menu_item">
-                        <a className="nav" href="/">
+                        <a className="nav" href="#">
                           Contact
                         </a>
                         <ul className="sub_menu">
@@ -183,10 +185,10 @@ const Home = () => {
                             <a href="/contact">Contact Us</a>
                           </li>
                           <li>
-                            <a href="/helps & Faqs">Helps & Faqs</a>
+                            <a href="#">Helps & Faqs</a>
                           </li>
                           <li>
-                            <a href="/appointment">Appointment</a>
+                            <a href="#">Appointment</a>
                           </li>
                           <li>
                             <a href="/terms">Terms & Conditions</a>
@@ -324,17 +326,8 @@ const Home = () => {
           <DisplaySection>
             <div className="container">
               <div className="row">
-                <article className="showcase">
-                  <h1>An expert cleaning service you can trust</h1>
-                  <p>
-                    Rade integrated services Ltd is a team of specially trained
-                    and dedicated employees to provide professional service.
-                  </p>
-                  {/* <button className="btn">Learn More</button> */}
-                  <Link to="/services" className="btn">
-                    Learn More
-                  </Link>
-                </article>
+                <ArticleShowcase ></ArticleShowcase>
+                <GoogleForm></GoogleForm>
                 {/* <div className="form">
                   <h3>Get Free Estimate</h3>
                   <form action="">

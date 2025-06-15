@@ -81,7 +81,7 @@ const Contact = () => {
                   <nav className="main_navigation">
                     <ul className="mastermenu">
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Services
                         </a>
                         <ul className="sub_menu">
@@ -91,7 +91,7 @@ const Contact = () => {
                         </ul>
                       </li>
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Company
                         </a>
                         <ul className="sub_menu">
@@ -107,7 +107,7 @@ const Contact = () => {
                         </ul>
                       </li>
                       <li className="menu_item">
-                        <a className="nav" href="2w">
+                        <a className="nav" href="#">
                           Contact
                         </a>
                         <ul className="sub_menu">
@@ -115,10 +115,10 @@ const Contact = () => {
                             <a href="/contact">Contact Us</a>
                           </li>
                           <li>
-                            <a href="/helps & faqs">Helps & Faqs</a>
+                            <a href="#">Helps & Faqs</a>
                           </li>
                           <li>
-                            <a href="/appointment">Appointment</a>
+                            <a href="#">Appointment</a>
                           </li>
                           <li>
                             <a href="/terms">Terms & Conditions</a>

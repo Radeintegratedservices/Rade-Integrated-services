@@ -12,7 +12,7 @@ const Header = styled.div`
     color: #fff;
     background-image: url(${clip});
     overflow: hidden;
-    background-size: cover; /* Adjust based on need */
+    background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 120px;
 
@@ -56,7 +56,6 @@ const Header = styled.div`
           font-size: 0.9rem;
 
           @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-            // visibility: hidden;
             display: none;
           }
         }
@@ -141,20 +140,61 @@ const Header = styled.div`
         .mastermenu {
           display: flex;
           position: relative;
-          li {
+          list-style: none;
+
+          .menu_item {
             position: relative;
             list-style: none;
             padding: 20px 60px 20px 0;
 
+            /* Animate border-top from left to right on hover */
             .nav {
               text-decoration: none;
               color: #fff;
+              padding: 20px 0;
+              position: relative;
+              border-top: 2px solid transparent;
+              transition: border-color 0.3s linear;
+            }
 
-              &:hover {
-                border-top: 2px solid #fff;
-                padding-top: 34px;
-              }
+            .nav::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: -17px;
+              width: 0;
+              height: 2px;
+              background: #fff;
+              transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+              z-index: 1;
+            }
 
+            &:hover > .nav::before,
+            &.active > .nav::before {
+              width: 100%;
+            }
+
+            &:hover > .nav,
+            .nav:hover {
+              border-top: 2px solid transparent;
+            }
+
+            &:hover > .sub_menu,
+            .sub_menu:hover {
+              visibility: visible;
+              opacity: 1;
+              clip: auto;
+              cursor: pointer;
+              animation: fadeInBottom 300ms ease;
+            }
+
+            /* Add active border-top when .active class is present */
+            &.active > .nav {
+              border-top: 2px solid transparent;
+              padding-top: 34px;
+            }
+
+            .nav {
               &::after {
                 content: "";
                 position: absolute;
@@ -164,39 +204,45 @@ const Header = styled.div`
                 font-weight: 900;
               }
             }
+          }
 
-            .sub_menu {
-              visibility: hidden;
-              opacity: 0;
-              position: absolute;
-              z-index: 99;
-              top: 100%;
-              padding: 20px 0;
-              transition: opacity 300ms ease-in-out;
-              clip: rect(1px, 1px, 1px, 1px);
-              background-color: #fff;
+          .sub_menu {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            list-style: none;
+            z-index: 99;
+            top: 100%;
+            padding: 20px 0;
+            transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+            clip: rect(1px, 1px, 1px, 1px);
+            background-color: #fff;
 
-              li {
-                background-color: #fff;
-                padding: 5px 40px;
-                width: 200px;
-                color: #000;
+            li {
+              padding: 5px 40px;
+              width: 200px;
+              color: #000;
 
-                a {
-                  color: ${(props) => props.theme.color.darkBlue};
-                  line-height: 1.5;
-                  text-decoration: none;
+              a {
+                color: ${(props) => props.theme.color.darkBlue};
+                line-height: 1.5;
+                text-decoration: none;
 
-                  &:hover {
-                    color: ${(props) => props.theme.color.lightBlue};
-                  }
+                &:hover {
+                  color: ${(props) => props.theme.color.lightBlue};
                 }
               }
             }
-            &:hover > .sub_menu {
-              visibility: visible;
+          }
+
+          @keyframes fadeInBottom {
+            from {
+              opacity: 0;
+              transform: translateY(25px);
+            }
+            to {
               opacity: 1;
-              clip: inherit;
+              transform: translateY(0);
             }
           }
         }
@@ -217,7 +263,7 @@ const Header = styled.div`
           color: ${(props) => props.theme.color.darkBlue};
           text-decoration: none;
           transition: background-color 0.3s ease-in-out;
-          transition: transform 0.2s ease-in-out; /* Smooth transition */
+          transition: transform 0.2s ease-in-out;
 
           &:hover {
             background-color: ${(props) => props.theme.color.lightBlue};
@@ -280,7 +326,6 @@ const Header = styled.div`
 
             list-style: none;
             .sub_menu {
-              // display: none;
               list-style: none;
               li {
                 a {
