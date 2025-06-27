@@ -4,7 +4,7 @@ const AboutMe = styled.section`
   display: flex;
   margin-bottom: 20px;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    height: 1200px;
+    height: 1150px;
   }
   
   .row {
