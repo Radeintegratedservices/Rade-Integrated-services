@@ -66,6 +66,11 @@ const DisplaySection = styled.div`
         width: 80%;
         margin-bottom: 40px;
         line-height: 1.7;
+        
+        @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+          width: 100%;
+          text-align: center;
+        }
       }
       .btn {
         text-decoration: none;

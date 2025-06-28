@@ -1,20 +1,18 @@
 import { GoogleFormContainer } from "./styles/GoogleFormContainer.styled";
 
 const GoogleForm = () => (
-  <GoogleFormContainer>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdvCHcfch3Cbzyy2czr-JHcMUWJ1h8W0TEQ5gq43a4-Q5jvIQ/viewform?embedded=true"
-      width="100%"
-      height="600"
-      frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
-      title="Google Form"
-      allow="fullscreen"
-    >
-      Loading…
-    </iframe>
-  </GoogleFormContainer>
+ <GoogleFormContainer>
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSePxvo42oja71yMjaTLQd-UZaLvR9umpTiuTgktiFCQ6VR9gw/viewform"
+    width="415"
+    height="600"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+  >
+    Loading…
+  </iframe>
+</GoogleFormContainer>
 );
 
 export default GoogleForm;
