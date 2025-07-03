@@ -306,7 +306,6 @@ const Header = styled.div`
       .site_navigation {
         background-color: #fff;
         position: absolute;
-        z-index: 999;
         width: 100%;
         top: 80px;
         padding: 30px 15px;

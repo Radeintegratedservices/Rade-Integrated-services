@@ -6,7 +6,8 @@ const WhyChooseUs = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
-    height: 1550px;
+    margin-top: 100px;
+    height: 1700px;
   }
 
   .row {
@@ -46,10 +47,8 @@ const WhyChooseUs = styled.section`
       }
 
       p {
-        font-size: 14px;
         line-height: 1.7;
         margin-bottom: 10px;
-        color: ${({ theme }) => theme.color.darkBlue};
         opacity: .7;
       }
       .btn {
@@ -147,18 +146,13 @@ const WhyChooseUs = styled.section`
       }
 
       .whychoose {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         img {
-          margin-bottom: 5px;
+          margin-bottom: 10px;
         }
         h2 {
           margin-bottom: 10px;
           color: ${({ theme }) => theme.color.darkBlue};
-        }
-        p{
-          color: ${({ theme }) => theme.color.darkBlue};
-          font-size: 14px;
-          opacity: .7;
         }
       }
     }
