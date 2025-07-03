@@ -237,14 +237,11 @@ const Home = () => {
                   </a>
                 </div>
                 <div className="open-menu" onClick={toggleNav}>
-                  {/* <i class="fa-solid fa-x"></i> */}
                   {!isClick ? (
                     <i class="fa-solid fa-bars"></i>
                   ) : (
                     <i class="fa-solid fa-x"></i>
                   )}
-                  {/* <i class="fa-solid fa-bars"></i>
-                            <i class="fa-solid fa-x"></i> */}
                 </div>
                 {isNavVisible && (
                   <div className="site_navigation">
@@ -326,7 +323,7 @@ const Home = () => {
           <DisplaySection>
             <div className="container">
               <div className="row">
-                <ArticleShowcase ></ArticleShowcase>
+                <ArticleShowcase></ArticleShowcase>
                 <GoogleForm></GoogleForm>
                 {/* <div className="form">
                   <h3>Get Free Estimate</h3>

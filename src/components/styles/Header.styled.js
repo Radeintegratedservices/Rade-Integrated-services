@@ -310,8 +310,9 @@ const Header = styled.div`
         width: 100%;
         top: 80px;
         padding: 30px 15px;
-
+        
         .mastermenu {
+          z-index: 999;
           .menu_item {
             line-height: 3;
 
